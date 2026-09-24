@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #4f46e5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#themeToggleBtn {
+    background-color: #4a5568;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#themeToggleBtn:hover {
+    background-color: #2d3748;
+}
+
+body.dark-mode #themeToggleBtn {
+    background-color: #e2e8f0;
+    color: #1a202c;
+}
+
+body.dark-mode #themeToggleBtn:hover {
+    background-color: #ffffff;
+}
+
+nav.button {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+nav.button button {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+nav.button button:hover {
+    filter: brightness(0.95);
+}
+
+input, textarea {
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.content {
+    min-height: 250px;
+}
+
+.tab-content h2 {
+    margin-bottom: 10px;
+}
+
+.tab-content ul, .tab-content ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.tab-content li {
+    margin-bottom: 5px;
+}
+
+.filter-box {
+    margin-bottom: 15px;
+}
+
+.filter-box input {
+    padding: 6px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#FormLienHe div {
+    margin-bottom: 8px;
+}
+
+#FormLienHe input, 
+#FormLienHe textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+#formMsg {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --btn-bg: #f0f0f0;
+    --border-color: #ccc;
+    --input-bg: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #181818;
+    --text-color: #ffffff;
+    --btn-bg: #333333;
+    --border-color: #555555;
+    --input-bg: #222222;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
