@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Giới thiệu bản thân</h1>
-        <button id="themeToggleBtn">dark</button>
+        <button id="themeToggleBtn">Dark</button>
     </header>
 
     <nav class ="button">
@@ -21,8 +21,9 @@
 
     <div class="content">
         <div id="gioiThieu" class="tab-content">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
             <h2>Về bản thân mình</h2>
-            <p>Mình tên là Đặng Nguyên Bách, sinh viên đang theo học tại Học viện Công nghệ Bưu chính Viễn thông. Chào mừng bạn đến với trang web cá nhân của mình! Đây là nơi mình chia sẻ về hành trình học tập, các kỹ năng lập trình đã tích lũy và những dự án sản phẩm mà mình đã thực hiện.</p>
+            <p>Chào mừng bạn đến với trang web cá nhân của mình! Mình tên là Đặng Nguyên Bách, sinh ra và lớn lên tại Hải Phòng. Hiện tại mình đang theo học ngành UDU tại Học viện Công nghệ Bưu chính Viễn thông. Đây là nơi mình chia sẻ về hành trình học tập, các kỹ năng lập trình đã tích lũy và những dự án sản phẩm mà mình đã thực hiện.</p>
         </div>
 
         <div id="kyNang" class="tab-content">
@@ -47,12 +48,27 @@
         <ol class="projects-list">
             <li class="project-item">
                 <span> website "Giới thiệu bản thân"</span>
+                    <ul>
+                        <li>Giao diện Responsive (tương thích mọi thiết bị)</li>
+                        <li>Form liên hệ gửi email trực tiếp</li>
+                        <li>Tải xuống CV</li>
+                    </ul>
             </li>
             <li class="project-item">
                 <span> website "Quản lý sinh viên"</span>
+                <ul>
+                    <li>Thêm, sửa, xóa, tìm kiếm sinh viên (CRUD)</li>
+                    <li>Phân quyền Admin / Sinh viên</li>
+                    <li>Xuất danh sách ra file Excel</li>
+                </ul>
             </li>
             <li class="project-item">
                 <span> website "Shop bán đồ ăn online"</span>
+                <ul>
+                    <li>Giỏ hàng và Đặt hàng trực tuyến</li>
+                    <li>Theo dõi trạng thái đơn hàng</li>
+                    <li>Đánh giá và bình luận món ăn</li>
+                </ul>
             </li>
         </ol>
         </div>
@@ -68,6 +84,7 @@
                 </div>
                 <div>
                     <textarea id="message" rows="3" placeholder="Lời nhắn"></textarea>
+                    <small id="charCount">0/200 ký tự</small>
                 </div>
                 <button type="submit">Gửi</button>
             </form>

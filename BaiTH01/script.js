@@ -11,21 +11,16 @@ buttons.forEach(function (btn) {
 btn.classList.remove("activate");
 });
 document.getElementById(name).style.display = "block";
+
+
+const activeButton = document.querySelector(`.button button[onclick*="${name}"]`);
+if (activeButton) {
+    activeButton.classList.add("activate");
+}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-default_html = document.getElementById("gioiThieu");
-not_default_html1 = document.getElementById("kyNang");
-not_default_html2 = document.getElementById("duAn");
-not_default_html3 = document.getElementById("lienHe");
-if (default_html) {
-default_html.style.display = "block";
-}
-if (not_default_html1 || not_default_html2 || not_default_html3) {
-not_default_html1.style.display = "none";
-not_default_html2.style.display = "none";
-not_default_html3.style.display = "none";
-}
+    tabbar('gioiThieu');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.style.display = 'none';
                 }
             });
+        });
+    }
+
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+
+    if (messageInput && charCount) {
+        messageInput.addEventListener('input', () => {
+            const currentLength = messageInput.value.length;
+            charCount.textContent = `${currentLength}/200 ký tự`;
         });
     }
 
